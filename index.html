@@ -12,7 +12,7 @@
             background: linear-gradient(to right, #ffe4e1, #ffdab9); /* Gradient from pale pink to pale orange */
         }
         .container {
-            width: 95%; /* Increased from 80% for better mobile view */
+            width: 80%; /* Default width for desktop */
             margin: 20px auto;
             background: white;
             padding: 20px;
@@ -81,8 +81,8 @@
         /* Add these new mobile-specific styles */
         @media screen and (max-width: 768px) {
             .container {
-                width: 100%;
-                margin: 0;
+                width: 95%; /* Increased width for mobile */
+                margin: 10px auto;
                 padding: 10px;
                 border-radius: 0;
             }

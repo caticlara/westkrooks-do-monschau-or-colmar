@@ -12,7 +12,7 @@
             background: linear-gradient(to right, #ffe4e1, #ffdab9); /* Gradient from pale pink to pale orange */
         }
         .container {
-            width: 80%;
+            width: 95%; /* Increased from 80% for better mobile view */
             margin: 20px auto;
             background: white;
             padding: 20px;
@@ -34,9 +34,11 @@
         }
         table {
             width: 100%;
-            max-width: 80%;
-            margin: 20px auto;
+            max-width: 100%; /* Ensure table uses full container width */
+            margin: 20px 0; /* Remove horizontal margin */
             border-collapse: collapse;
+            overflow-x: auto; /* Allow horizontal scrolling within the table */
+            display: block; /* Ensure table is block-level for scrolling */
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -44,6 +46,7 @@
         th, td {
             padding: 10px;
             text-align: left;
+            min-width: 120px; /* Ensure minimum width for content */
         }
         th {
             background-color: #ff6347; /* Tomato color */
@@ -73,6 +76,25 @@
             margin-top: 10px;
             font-weight: bold;
             color: #ff4500; /* Orange red color */
+        }
+
+        /* Add these new mobile-specific styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+                border-radius: 0;
+            }
+
+            .image-grid {
+                flex-direction: column;
+            }
+
+            .image-grid div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>

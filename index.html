@@ -32,6 +32,11 @@
             max-width: 600px;
             border-radius: 10px;
         }
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+            position: relative;
+        }
         table {
             width: 100%;
             max-width: 100%; /* Ensure table uses full container width */
@@ -51,6 +56,7 @@
         th {
             background-color: #ff6347; /* Tomato color */
             color: white;
+            position: -webkit-sticky; /* For Safari */
             position: sticky;
             top: 0;
             z-index: 2; /* Ensure the header stays on top of other content */
@@ -100,6 +106,11 @@
                 display: block; /* Ensure table is block-level for scrolling */
                 overflow-x: auto; /* Allow horizontal scrolling within the table */
             }
+
+            .table-container {
+                margin: 0 -10px; /* Negative margin to allow full width */
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -121,44 +132,46 @@
              </a>
         </div>
         
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Colmar, France</th>
-                <th>Monschau, Germany</th>
-            </tr>
-            <tr class="highlight">
-                <td><strong>Quick Facts</strong></td>
-                <td>Charming town in northeastern France known for its well-preserved medieval architecture and scenic canals.</td>
-                <td>Picturesque town in the Eifel region of Germany on the Belgian border, known for its half-timbered houses and serene, natural surroundings.</td>
-            </tr>
-            <tr>
-                <td><strong>Travel Time</strong></td>
-                <td>Approximately <strong>5-6 hours on several trains</strong>  or <strong>5 hours by car</strong> from Kerpen/Cologne, <strong>1-2 hours from Karlsruhe</strong>. Some uncertainty around train timetable due to repairs on the fast-train line from Karlsruhe to Colmar -> expect adventure and possible delays/long stopovers.</td>
-                <td>Roughly <strong>1-1.5 hours</strong> by car from Cologne or <strong> 2 hours </strong>by train & bus (via Aachen). Or <strong> 4-5 hours </strong> on 2-3 trains + one bus from Karlsruhe</td>
-            </tr>
-            <tr class="highlight">
-                <td><strong>Key Landmarks</strong></td>
-                <td>Little Venice, historic old town, vibrant markets.</td>
-                <td>Historic town center, scenic river valleys, Rotes Haus museum.</td>
-            </tr>
-            <tr>
-                <td><strong>Accommodation</strong></td>
-                <td>Airbnb in historic house in heart of central Colmar.<br><strong>Sleeping Arrangements</strong>: 1st floor - 2 bedrooms each with double bed, 1 bedroom with 2 single beds. 2nd Floor (attic) - 1 bedroom with double bed, extra lounge with two beds.<br><strong>Key Amenities:</strong> Lots of living space, character accommodation, great kitchen, close to supermarkets, very family-friendly.<br><strong>Note:</strong> One full bathroom only (1st floor), one extra toilet.</td>
-                <td>High-end Airbnb in a historic fabric factory close to Monschau town centre.<br><strong>Sleeping Arrangements</strong>: 4 bedrooms each with king-size bed, one including an extra single bed as a separate high bunk.<br><strong>Key Amenities:</strong> Bright, modernly furnished space, beautiful natural surroundings, good kitchen, 3 full bathrooms. Private sauna and relaxation area, attractive patio & outdoor area.<br><strong>Note:</strong> Supermarkets are not within walking distance, 10 min drive, requiring a rental vehicle or C & A to bring their 4-seater car.</td>
-            </tr>
-            <tr class="highlight">
-                <td><strong>Activities</strong></td>
-                <td>Guided walking tours, boat rides through the canals, local museums, visits to nearby medieval towns like Eguisheim or Kaysersberg.<br><strong>Balanced Itinerary:</strong> Cultural sightseeing in the morning with relaxed afternoons at cafés or local markets. Potential day-trip to Strasbourg and/or visit to nearby medieval vineyard towns like Eguisheim or Kaysersberg, hike up to a castle.</td>
-                <td>Exploring the picturesque old town, local artisan shops, and scenic nature trails, famous for mustard!<br><strong>Balanced Itinerary:</strong> Cultural walks in the morning with leisurely afternoons at outdoor cafés and park visits. If the weather is good, a longer hike may be planned (e.g., to the High Fens nature reserve in Belgium or into Eifel National Park for a day hike in the hills/forest/lakes).</td>
-            </tr>
-            <tr>
-                <td><strong>Pros & Cons</strong></td>
-                <td><strong>Highlights:</strong> Immersive cultural experience, picturesque scenery, excellent culinary options, close to Karlsruhe
-                <br><strong>Potential Challenges:</strong> Significantly longer travel duration from Cologne and unpredictable train journey with multiple changes.<br><strong>Good for:</strong> Being in France, cultural adventure, a wider variety of activities, charming historic and medieval architecture.</td>
-                <td><strong>Highlights:</strong> Shorter travel time from Cologne, relaxed pace, and a very comfortable peaceful setting ideal for multi-generational relaxation.<br><strong>Potential Challenges:</strong> Fewer formal attractions compared to Colmar, less variety for dining out, further to travel from/to Karlsruhe<br><strong>Good for:</strong> Relaxing and unwinding, experiencing picturesque historic surroundings, enjoying the natural environment and landscape.</td>
-            </tr>
-        </table>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Colmar, France</th>
+                    <th>Monschau, Germany</th>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Quick Facts</strong></td>
+                    <td>Charming town in northeastern France known for its well-preserved medieval architecture and scenic canals.</td>
+                    <td>Picturesque town in the Eifel region of Germany on the Belgian border, known for its half-timbered houses and serene, natural surroundings.</td>
+                </tr>
+                <tr>
+                    <td><strong>Travel Time</strong></td>
+                    <td>Approximately <strong>5-6 hours on several trains</strong>  or <strong>5 hours by car</strong> from Kerpen/Cologne, <strong>1-2 hours from Karlsruhe</strong>. Some uncertainty around train timetable due to repairs on the fast-train line from Karlsruhe to Colmar -> expect adventure and possible delays/long stopovers.</td>
+                    <td>Roughly <strong>1-1.5 hours</strong> by car from Cologne or <strong> 2 hours </strong>by train & bus (via Aachen). Or <strong> 4-5 hours </strong> on 2-3 trains + one bus from Karlsruhe</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Key Landmarks</strong></td>
+                    <td>Little Venice, historic old town, vibrant markets.</td>
+                    <td>Historic town center, scenic river valleys, Rotes Haus museum.</td>
+                </tr>
+                <tr>
+                    <td><strong>Accommodation</strong></td>
+                    <td>Airbnb in historic house in heart of central Colmar.<br><strong>Sleeping Arrangements</strong>: 1st floor - 2 bedrooms each with double bed, 1 bedroom with 2 single beds. 2nd Floor (attic) - 1 bedroom with double bed, extra lounge with two beds.<br><strong>Key Amenities:</strong> Lots of living space, character accommodation, great kitchen, close to supermarkets, very family-friendly.<br><strong>Note:</strong> One full bathroom only (1st floor), one extra toilet.</td>
+                    <td>High-end Airbnb in a historic fabric factory close to Monschau town centre.<br><strong>Sleeping Arrangements</strong>: 4 bedrooms each with king-size bed, one including an extra single bed as a separate high bunk.<br><strong>Key Amenities:</strong> Bright, modernly furnished space, beautiful natural surroundings, good kitchen, 3 full bathrooms. Private sauna and relaxation area, attractive patio & outdoor area.<br><strong>Note:</strong> Supermarkets are not within walking distance, 10 min drive, requiring a rental vehicle or C & A to bring their 4-seater car.</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Activities</strong></td>
+                    <td>Guided walking tours, boat rides through the canals, local museums, visits to nearby medieval towns like Eguisheim or Kaysersberg.<br><strong>Balanced Itinerary:</strong> Cultural sightseeing in the morning with relaxed afternoons at cafés or local markets. Potential day-trip to Strasbourg and/or visit to nearby medieval vineyard towns like Eguisheim or Kaysersberg, hike up to a castle.</td>
+                    <td>Exploring the picturesque old town, local artisan shops, and scenic nature trails, famous for mustard!<br><strong>Balanced Itinerary:</strong> Cultural walks in the morning with leisurely afternoons at outdoor cafés and park visits. If the weather is good, a longer hike may be planned (e.g., to the High Fens nature reserve in Belgium or into Eifel National Park for a day hike in the hills/forest/lakes).</td>
+                </tr>
+                <tr>
+                    <td><strong>Pros & Cons</strong></td>
+                    <td><strong>Highlights:</strong> Immersive cultural experience, picturesque scenery, excellent culinary options, close to Karlsruhe
+                    <br><strong>Potential Challenges:</strong> Significantly longer travel duration from Cologne and unpredictable train journey with multiple changes.<br><strong>Good for:</strong> Being in France, cultural adventure, a wider variety of activities, charming historic and medieval architecture.</td>
+                    <td><strong>Highlights:</strong> Shorter travel time from Cologne, relaxed pace, and a very comfortable peaceful setting ideal for multi-generational relaxation.<br><strong>Potential Challenges:</strong> Fewer formal attractions compared to Colmar, less variety for dining out, further to travel from/to Karlsruhe<br><strong>Good for:</strong> Relaxing and unwinding, experiencing picturesque historic surroundings, enjoying the natural environment and landscape.</td>
+                </tr>
+            </table>
+        </div>
         
         <div class="image-grid">
             <div>

@@ -34,19 +34,21 @@
         }
         .table-container {
             position: relative;
-            overflow: auto;
-            max-height: 80vh;
+            overflow: visible;
             border: 1px solid #ddd;
+            margin: 20px 0;
         }
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 0;
+            border-collapse: separate;
+            border-spacing: 0;
         }
-        thead {
+        thead tr {
+            position: -webkit-sticky; /* For Safari */
             position: sticky;
             top: 0;
             z-index: 2;
+            background: #ff6347;
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -111,13 +113,20 @@
             }
 
             table {
-                display: block; /* Ensure table is block-level for scrolling */
-                overflow-x: auto; /* Allow horizontal scrolling within the table */
+                display: table;
+                width: 100%;
             }
 
             .table-container {
+                overflow-x: auto;
                 margin: 0 -10px; /* Negative margin to allow full width */
                 padding: 0 10px;
+            }
+
+            thead tr {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
             }
         }
     </style>
